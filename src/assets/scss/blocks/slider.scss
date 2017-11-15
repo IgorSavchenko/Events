@@ -1,0 +1,61 @@
+// main: ../main.scss
+.slider {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  &-item {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    max-width: 730px;
+    height: auto;
+  }
+  &-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px 0;
+    &-button {
+      width: 10px;
+      height: 10px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 0;
+      margin: 0 5px;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      &--active {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+//arrows in slider
+.slider-button {
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-size: cover;
+  &--prev {
+    background: url('../img/arrow-left.png') center center no-repeat;
+    left: 10px;
+    &--dark {
+      background: url('../img/arrow-left--dark.png') center center no-repeat;
+    }
+  }
+  &--next {
+    background: url('../img/arrow-right.png') center center no-repeat;
+    right: 10px;
+    &--dark {
+      background: url('../img/arrow-right--dark.png') center center no-repeat;
+    }
+  }
+}
