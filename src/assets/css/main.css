@@ -29,6 +29,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .events {
@@ -49,7 +50,7 @@ body {
   color: #ffffff;
 }
 
-.events__link {
+.events__reference {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +60,7 @@ body {
   font-size: 14px;
 }
 
-.events__link i {
+.events__reference i {
   font-size: 20px;
   margin-right: 10px;
 }
@@ -73,12 +74,12 @@ body {
   width: calc(576 / 1170 * 100%);
 }
 
-.form .data__input {
+.form .date__input {
   width: calc(120 / 1170 * 100%);
   position: relative;
 }
 
-.form .data__input .form__field {
+.form .date__input .form__field {
   padding-left: 35px;
 }
 
@@ -142,6 +143,10 @@ body {
 
 .form__button:hover {
   background: #2646bc;
+}
+
+.content {
+  position: relative;
 }
 
 .content__data {
@@ -396,6 +401,7 @@ body {
   width: calc(1 / 6 * 100%);
   height: 45px;
   border: none;
+  outline: none;
   background: transparent;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.1);
@@ -405,6 +411,34 @@ body {
 .slider__navigation-button--active {
   color: white;
   border-top: 3px solid white;
+}
+
+.slider__arrow-button {
+  position: absolute;
+  top: 150px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider__arrow-button--prev {
+  left: 275px;
+}
+
+.slider__arrow-button--next {
+  right: 285px;
+}
+
+.slider__arrow-button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /*# sourceMappingURL=main.css.map */

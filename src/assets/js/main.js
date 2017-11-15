@@ -9,7 +9,6 @@ document.querySelector('.form__button').addEventListener('click', function(event
 //===================================
 // using siema slider
 import Siema from 'siema';
-initSlider();
 //initialize slider
 function initSlider() {
   const SIEMA = new Siema({
@@ -40,20 +39,14 @@ function initSlider() {
       }
     });
   }
-  // Add a function that generates arrow left and right buttons to Siema
+  // Add a function of navigation to left and right arrow buttons
   Siema.prototype.addArrows = function() {
-    // make buttons & append them inside Siema's container
-    this.prevArrow = document.createElement('button');
-    this.nextArrow = document.createElement('button');
-    // this.prevArrow.textContent = 'previous slide';
-    this.prevArrow.classList.add('arrow', 'arrow--prev', 'fa', 'fa-lg', 'fa-chevron-left');
-    // this.nextArrow.textContent = 'next slide';
-    this.nextArrow.classList.add('arrow', 'arrow--next', 'fa', 'fa-lg', 'fa-chevron-right');
-    this.selector.appendChild(this.prevArrow);
-    this.selector.appendChild(this.nextArrow);
+    this.prevArrow = document.querySelector('.slider__arrow-button--prev');
+    this.nextArrow = document.querySelector('.slider__arrow-button--next');
     // event handlers on buttons
     this.prevArrow.addEventListener('click', () => this.prev());
     this.nextArrow.addEventListener('click', () => this.next());
   }
   SIEMA.addArrows();
 };
+initSlider();
